@@ -1,4 +1,4 @@
-(c) Copyright 2017-2018 SUSE LLC
+(c) Copyright 2024 NREC
 
 # Branding
-SUSE branding for the OpenStack Horizon dashboard
+NREC branding for the OpenStack Horizon dashboard
