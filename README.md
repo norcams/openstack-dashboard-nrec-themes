@@ -1,5 +1,3 @@
-(c) Copyright 2024 NREC
-
 # Branding
 NREC branding for the OpenStack Horizon dashboard
 
@@ -16,6 +14,12 @@ NREC branding for the OpenStack Horizon dashboard
 3. (Darkmode hack) Replace hardcoded white color for even numbered rows with $table-bg-accent
 
 ```sed -i -e 's/$table-bg-even: #ffffff;/$table-bg-even: $table-bg-accent !default;/g' /usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/scss/_variables.scss```
+
+A patch for this exists in <ansible repo>
+
+```bash
+sudo ansible-playbook -e patchfile=files/patches/dashboard/0004-nrec-themes.diff -e basedir=/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/scss lib/patch.yaml
+```
 
 4. Restart httpd
 
