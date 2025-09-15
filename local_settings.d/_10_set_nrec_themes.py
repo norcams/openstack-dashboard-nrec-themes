@@ -1,5 +1,3 @@
-# (c) Copyright 2024 NREC
-
 AVAILABLE_THEMES = [
     ('default', 'Default', 'themes/default'),
     ('darkblue', 'Dark blue', 'themes/darkblue')
