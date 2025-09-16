@@ -18,7 +18,8 @@ NREC branding for the OpenStack Horizon dashboard
 A patch for this exists in <ansible repo>
 
 ```bash
-sudo ansible-playbook -e myhosts=${loc}-dashboard-01 -e patchfile=files/patches/dashboard/0004-nrec-themes.diff -e dest=/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/scss/_variables.scss lib/patch.yaml
+loc=vagrant
+ansible-playbook -e myhosts=${loc}-dashboard -e patchfile=../files/patches/dashboard/0004-nrec-themes.diff -e basedir=/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/scss lib/patch.yaml
 ```
 
 4. Restart httpd
