@@ -11,12 +11,6 @@
   }
 }
 
-.container.login.suse-login {
-  margin-top: 0px;
-  padding-top: $navbar-height * 2;
-}
-
-
 body {
   // Paint the entire page background with the same color as the navbar background
   // so that no matter how far the user scrolls down, it will still appear to have
@@ -63,20 +57,62 @@ body {
   background-color: $body-bg;
 }
 
+/* ---- login / splash screen, start ---- */
+
+/* Make splash area white like default */
 #splash {
-  background-color: $blue-darker;
-  .panel, .panel-default > .logo-panel-heading, .panel-footer {
-    background-color: $blue-darker;
-    color: #ffffff;
-    border: 0;
-    margin-top: 5em;
+  background-color: $bc-white;
+  .panel,
+  .panel-default > .logo-panel-heading,
+  .panel-footer {
+    background-color: $bc-white;
+    color: $bc-black;
+    border: 1px solid #ddd;
   }
   input {
-    color: #ffffff;
-    background-color: $blue-dark;
-    border-color: #001727;
+    color: $bc-black ;;
+    background-color: $bc-white;
+    border-color: #ccc;
   }
 }
+
+/* Ensure the entire login splash area, including logo header, is white */
+#splash,
+#splash .logo,
+#splash .logo-panel-heading,
+#splash .panel-default > .logo-panel-heading,
+#splash .panel-heading,
+#splash .panel-body {
+  background-color: $bc-white;
+  color: $bc-black;
+  border: none;
+}
+
+/* Optional: tweak padding/margins so logo spacing still looks natural */
+#splash .logo {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+/* Fix dark background in <select> dropdown on login page */
+#splash select.form-control,
+#splash select {
+  background-color: $bc-white;
+  color: $bc-black;
+  border: 1px solid #ccc ;;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Also fix the dropdown arrow background in some browsers */
+#splash select.form-control:focus {
+  background-color: $bc-white;
+  color: $bc-black;
+  border-color: #999;
+}
+
+/* ---- login / splash screen, end ---- */
 
 button.close {
   opacity: unset;
